@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Query extends Model
 {
     // 
-    protected $fillable = { 
-        
+    protected $fillable = [
+
         'name','telephone_number','email','location','query'
-    }
+    ];
 }
