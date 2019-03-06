@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Query;
 class QueryController extends Controller
 {
     /**
@@ -39,19 +39,19 @@ class QueryController extends Controller
         $request->validate([
             'your_name'=>'required',
             'telephone_number'=>'required',
-            'email'=> 'required |unique',
+            'email'=> 'required',
             'location'=>'required',
             'query'=>'required',
         ]);
         $query = new Query ([
-            'your_name'=>$request->get('your_name'),
+            'name'=>$request->get('your_name'),
             'telephone_number'=>$request->get('telephone_number'), 
             'email'=>$request->get('email'),
             'location'=>$request->get('location'),
             'query'=>$request->get('query'),
         ]);
         $query->save();
-        return redirect ('/')->with('success','Your information has been submitted ')
+        return redirect ('/')->with('success','Your information has been submitted ');
 
     }
 

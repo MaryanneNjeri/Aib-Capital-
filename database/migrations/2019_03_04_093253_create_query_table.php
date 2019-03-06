@@ -13,7 +13,7 @@ class CreateQueryTable extends Migration
      */
     public function up()
     {
-        Schema::create('query', function (Blueprint $table) {
+        Schema::create('queries', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('telephone_number');
@@ -31,6 +31,6 @@ class CreateQueryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('query');
+        Schema::dropIfExists('queries');
     }
 }

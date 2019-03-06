@@ -11,3 +11,4 @@
 |
 */
 Route::get('/','QueryController@create');
+Route::post('/create/query', 'QueryController@store');

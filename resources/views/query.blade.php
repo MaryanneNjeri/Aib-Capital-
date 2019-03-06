@@ -6,8 +6,13 @@
     margin-top: 40px;
   }
 </style> 
+@if(session()->get('success'))
+    <div class="alert alert-success">
+      {{ session()->get('success') }}  
+    </div><br />
+  @endif
+<div class="card uper"> 
 
-<div class="card uper">
 <div class="card-header">
 <h4>AIB Capital</h4> 
 </div> 
@@ -21,7 +26,7 @@
         </ul>
       </div><br /> 
       @endif  
-      <form method="post" action="">
+      <form method="post" action="{{url ('/create/query') }}">
       <div class="form-group">
       @csrf 
       <label for="name">Your Name </label>
@@ -30,7 +35,7 @@
 
       <div class="form-group">
       <label for="number">Telephone Number </label>
-      <input type="text" class="form-control" name="telphone_number"/>
+      <input type="text" class="form-control" name="telephone_number"/>
       </div> 
       <div class="form-group">
       <label for="email">Email </label>
@@ -43,7 +48,9 @@
       <div class="form-group">
       <label for="query"> Query</label>
       <textarea class="form-control" name="query"></textarea>
-      </div>
+      </div> 
+      <button type="submit" class="btn btn-success">Submit</button> 
+      </form>
+      </div> 
       </div>
       @endsection
-</div>
