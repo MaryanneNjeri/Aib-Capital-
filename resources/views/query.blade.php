@@ -20,6 +20,30 @@
             @endforeach
         </ul>
       </div><br /> 
-      @endif 
+      @endif  
+      <form method="post" action="">
+      <div class="form-group">
+      @csrf 
+      <label for="name">Your Name </label>
+      <input type="text" class="form-control" name="your_name"/>
+      </div>
+
+      <div class="form-group">
+      <label for="number">Telephone Number </label>
+      <input type="text" class="form-control" name="telphone_number"/>
+      </div> 
+      <div class="form-group">
+      <label for="email">Email </label>
+      <input type="email" class="form-control" name="email"/>
+      </div> 
+      <div class="form-group">
+      <label for="location"> Location</label>
+      <input type="text" class="form-control" name="location"/>
+      </div> 
+      <div class="form-group">
+      <label for="query"> Query</label>
+      <textarea class="form-control" name="query"></textarea>
+      </div>
+      </div>
       @endsection
 </div>
