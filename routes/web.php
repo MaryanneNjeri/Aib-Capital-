@@ -11,4 +11,7 @@
 |
 */
 Route::get('/','QueryController@create');
-Route::post('/create/query', 'QueryController@store');
+Route::post('/create/query', 'QueryController@store'); 
+// route to export to excel
+
+Route::get('/export/{type}', 'QueryController@export');

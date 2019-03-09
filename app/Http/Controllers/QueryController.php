@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 use App\Query;
+use App\Exports\QuerysExport;
 class QueryController extends Controller
 {
     /**
@@ -53,6 +54,10 @@ class QueryController extends Controller
         $query->save();
         return redirect ('/')->with('success','Your information has been submitted ');
 
+    } 
+    public function export($type)
+    {
+        return Excel::download(new QuerysExport, 'queries.' . $type);
     }
 
     /**

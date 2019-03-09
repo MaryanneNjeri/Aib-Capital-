@@ -42,6 +42,9 @@ body, html {
   background-color:black;
   color: white;
   text-align: center;
+} 
+.label {
+    color: white;
 }
 </style>
 
@@ -65,7 +68,12 @@ body, html {
     </div>
     </div>
 
-   </div>
+   </div> 
+
+             <div class="form-group">
+                 <a href="/export/xlsx" class="btn btn-success">Export to .xlsx</a>
+                 <a href="/export/xls" class="btn btn-primary">Export to .xls</a>
+             </div>
     <div class="row">
         <div class="col-md-8"> 
         
@@ -104,31 +112,31 @@ body, html {
                     <form method="post" action="{{url ('/create/query') }}">
                         <div class="form-group">
                             @csrf
-                            <label for="name">Your Name </label>
+                            <label  style="color:white;" for="name"><b>Your Name </b></label>
                             <input type="text" class="form-control" name="your_name" />
                         </div>
 
                         <div class="form-group">
-                            <label for="number">Telephone Number </label>
+                            <label  style="color:white;" for="number"><b>Telephone Number </b></label>
                             <input type="text" class="form-control" name="telephone_number" />
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email </label>
+                            <label style="color:white;" for="email"> <b>Email</b> </label>
                             <input type="email" class="form-control" name="email" />
                         </div>
 
                         <div class="form-group">
-                            <label for="location"> Location</label>
+                            <label style="color:white;" for="location"><b> Location</b></label>
                             <input type="text" class="form-control" name="location" />
                         </div>
 
                         <div class="form-group">
-                            <label for="query"> Query</label>
+                            <label style="color:white;"  for="query"><b> Query</b></label>
                             <textarea class="form-control" name="query"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-warning">Submit</button>
+                        <button class="btn btn-warning" type="submit">Submit</button>
                     </form>
 
                 </div>
@@ -136,7 +144,7 @@ body, html {
         </div>
     </div> 
     <div class="footer">
-  <p>@Copyright <a style="color:orange;" href="http://www.aibcapital.com/">aibcapital.com</a> 2019.All rights reserved</p>
+  <p>@Copyright <a style="color:orange; align-items:center;" href="http://www.aibcapital.com/">aibcapital.com</a> 2019.All rights reserved</p>
 </div>
 
 @endsection
