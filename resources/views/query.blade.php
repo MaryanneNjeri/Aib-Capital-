@@ -69,11 +69,6 @@ body, html {
     </div>
 
    </div> 
-
-             <div class="form-group">
-                 <a href="/export/xlsx" class="btn btn-success">Export to .xlsx</a>
-                 <a href="/export/xls" class="btn btn-primary">Export to .xls</a>
-             </div>
     <div class="row">
         <div class="col-md-8"> 
         

@@ -14,7 +14,9 @@ class QueryController extends Controller
      */
     public function index()
     {
-        //
+        // 
+        $queries = \App\Query::all();
+        return view('index',compact('queries'));
     }
 
     /**
@@ -102,6 +104,9 @@ class QueryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // 
+        $query = \App\Query::find($id);
+        $query->delete();
+        return redirect('queries')->with('success','Information has been deleted');
     }
 }

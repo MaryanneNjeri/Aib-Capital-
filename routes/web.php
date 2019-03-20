@@ -12,6 +12,8 @@
 */
 Route::get('/','QueryController@create');
 Route::post('/create/query', 'QueryController@store'); 
+Route::get('/queries', 'QueryController@index')->name('queries');
 // route to export to excel
+Route::get('/delete/query/{id}', 'QueryController@destroy');
 
 Route::get('/export/{type}', 'QueryController@export');

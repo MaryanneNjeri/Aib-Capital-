@@ -8,7 +8,7 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <div class="container-fluid"  style="background-image:url(../images/backimage.jpg);background-repeat: no-repeat; background-attachment: fixed; height:1200px;background-position:center center ;  background-size: cover;">
+  <div class="container-fluid"  style="background-image:url(../images/backimage.jpg);background-repeat: no-repeat; background-attachment: fixed; height:1200px; opacity :0.8;background-position:center center ;  background-size: cover;">
     @yield('content')
   </div>
   <script src="{{ asset('js/app.js') }}" type="text/js"></script>
