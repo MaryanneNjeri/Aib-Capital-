@@ -131,7 +131,7 @@ body, html {
                             <textarea class="form-control" name="query"></textarea>
                         </div>
 
-                        <button class="btn btn-warning" type="submit">Submit</button>
+                        <button class="btn btn-warning" type="submit" onClick="changeClass()" id="myButton">Submit</button>
                     </form>
 
                 </div>
@@ -140,6 +140,14 @@ body, html {
     </div> 
     <div class="footer">
   <p>@Copyright <a style="color:orange; align-items:center;" href="http://www.aibcapital.com/">aibcapital.com</a> 2019.All rights reserved</p>
-</div>
+</div> 
+<script>
+function changeClass() { 
+                document.getElementById('myButton').className = "changedClass"; 
+                var button_class = document.getElementById('myButton').className; 
+                document.getElementById('myPara').innerHTML = "New class name: "  
+                + button_class; 
+            } 
+</script>
 
 @endsection
